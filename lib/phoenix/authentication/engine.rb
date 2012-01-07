@@ -3,6 +3,8 @@ require 'mongoid'
 module Phoenix
   module Authentication
     class Engine < Rails::Engine
+      #include Phoenix::Engine
+      
       isolate_namespace Phoenix
       engine_name 'phoenix_auth'
 
@@ -26,6 +28,10 @@ module Phoenix
       config.to_prepare &method(:activate).to_proc
       
       initializer "phoenix.authentication.environment", :after => 'phoenix.environment' do |app|
+      end
+      
+      config.after_initialize do
+        Phoenix.register_engine(Phoenix::Authentication)
       end
     end
   end
