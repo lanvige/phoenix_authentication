@@ -1,0 +1,93 @@
+#--------------------------------------------------------------
+# Ignore these files when commiting to a git repository
+#--------------------------------------------------------------
+
+# ------------ System ------------
+# Windows
+Thumbs.db
+
+# Mac finder artifacts
+.DS_Store
+
+# ------------ Rails ------------
+# Bundler state
+/.bundle
+/vendor/bundle/
+
+# Gemfile's lock file
+Gemfile.lock
+
+# Acts as Indexed
+index/**/*
+
+# Minimal Rails specific artifacts
+db/*.sqlite3
+/log/*
+tmp/*
+/db/*.javadb/
+/db/*.sqlite3-journal
+/public/cache
+/cache
+
+# Ignore build files
+*.gem
+gempkg/
+pkg/
+
+# SASS
+.sass-cache
+.sass-cache/*
+
+# Sprockets
+public/assets
+public/stylesheets/compiled
+
+# Privacy data
+/config/config.yml
+/config/database.yml
+
+# Vendor Cache
+vendor/cache
+
+# ------------ Test ------------
+# Dummy for Rails RSpec
+/spec/dummy/
+*/spec/dummy/
+/spec/tmp/*
+
+# Capybara Bug
+/capybara*
+/capybara-*.html
+
+/coverage.data
+/coverage/
+
+# RCov
+/coverage
+
+# scm revert files
+**.orig
+
+# ------------ IDE ------------
+# Netbeans project directory
+/nbproject/
+
+# RubyMine
+.idea
+
+# Aptana & Eclipse project
+.project
+
+# Textmate project files
+/*.tmproj
+
+# Sublime text project
+/*.sublime-project
+/*.sublime-workspace
+
+# VIM artifacts
+*.swp
+*.swo
+
+# Backup
+*~
