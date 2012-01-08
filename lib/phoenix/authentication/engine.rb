@@ -6,14 +6,14 @@ module Phoenix
       #include Phoenix::Engine
       
       isolate_namespace Phoenix
-      engine_name 'phoenix_auth'
+      engine_name 'phoenix_authentication'
 
       config.autoload_paths += %W(#{config.root}/lib)
       # Load the locals under sub-folder
       config.i18n.load_path += Dir[File.join(config.root, 'config', 'locales', '**', '*.{rb,yml}').to_s]
 
       # Register Mongoid observers
-      config.mongoid.observers = :'phoenix/user_observer'
+      # config.mongoid.observers = :'phoenix/user_observer'
       
       def self.activate
         Dir.glob(File.join(File.dirname(__FILE__), "../../../app/**/*_decorator*.rb")) do |c|
@@ -31,7 +31,7 @@ module Phoenix
       end
       
       config.after_initialize do
-        Phoenix.register_engine(Phoenix::Authentication)
+        Phoenix.register_extension(Phoenix::Authentication)
       end
     end
   end
