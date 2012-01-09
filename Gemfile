@@ -1,7 +1,16 @@
 source 'http://rubygems.org'
 
-gemspec
+group :test do
+  gem 'rspec-rails', '~> 2.8.1'
+  # gem 'factory_girl', '~> 1.3.3'
+  gem 'factory_girl_rails', '~> 1.4.0'
+  gem 'faker'
+end
 
-# Databse
-#gem "mongoid", "~> 2.4.0"
-#gem "mongoid_slug", :require => 'mongoid/slug'
+if RUBY_VERSION < "1.9"
+  gem "ruby-debug"
+else
+  gem "ruby-debug19"
+end
+
+gemspec

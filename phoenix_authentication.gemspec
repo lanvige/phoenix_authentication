@@ -24,7 +24,7 @@ Gem::Specification.new do |s|
   s.require_path = 'lib'
   s.requirements << 'none'
 
-  s.add_dependency 'phoenix_core'#,    '~> 0.2.1.beta'
+  s.add_dependency 'phoenix_core',    '~> 0.2.1.beta'
   s.add_dependency 'mongoid',         "~> 2.4.0"
   s.add_dependency 'mongoid_slug'
   
